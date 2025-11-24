@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Maior Número de Páginas</title>
+    
+    
+        <link rel="stylesheet" href="desafio.css">
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1>Descubra o Livro com Mais Páginas</h1>
+    
+            <p>Digite a quantidade de páginas dos 5 maiores livros:</p>
+    
+            <input type="number" id="livro1" placeholder="Páginas do livro 1">
+            <input type="number" id="livro2" placeholder="Páginas do livro 2">
+            <input type="number" id="livro3" placeholder="Páginas do livro 3">
+            <input type="number" id="livro4" placeholder="Páginas do livro 4">
+            <input type="number" id="livro5" placeholder="Páginas do livro 5">
+    
+            <button onclick="calcularMaior()">Calcular</button>
+    
+            <div class="resultado" id="resultado"></div>
+        </div>
+    
+        <script>
+            function calcularMaior() {
+                const n1 = Number(document.getElementById("livro1").value);
+                const n2 = Number(document.getElementById("livro2").value);
+                const n3 = Number(document.getElementById("livro3").value);
+                const n4 = Number(document.getElementById("livro4").value);
+                const n5 = Number(document.getElementById("livro5").value);
+    
+                if (!n1 || !n2 || !n3 || !n4 || !n5) {
+                    document.getElementById("resultado").textContent =
+                        "Por favor, preencha todos os campos!";
+                    return;
+                }
+    
+                const maior = Math.max(n1, n2, n3, n4, n5);
+    
+                document.getElementById("resultado").textContent =
+                    "O maior número de páginas é: " + maior;
+            }
+        </script>
+    </body>
+    
+    </html>
+    
+</body>
+</html>
